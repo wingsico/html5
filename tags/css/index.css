@@ -32,11 +32,6 @@
   }
 }
 
-body, html {
-  height: 100%;
-}
-
-
 body {
   max-width: 1080px;
   min-width: 960px;
@@ -244,6 +239,7 @@ main article section.about-me p {
 }
 
 footer {
+  margin-top: 100px;
   height: 100px;
   background-color: #fff;
   border-top: 1px solid #ccc;
