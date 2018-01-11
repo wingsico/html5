@@ -33,10 +33,11 @@
 }
 
 body {
-  max-width: 1080px;
-  min-width: 960px;
-  margin: 100px auto;
+  
+  margin: 0 auto;
+  margin-top: 100px;
   background-color: aliceblue;
+  height: 100%;
 }
 
 a {
@@ -57,6 +58,12 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+header {
+  max-width: 1080px;
+  min-width: 960px;
+  margin: 0 auto;
 }
 
 header nav.navigator {
@@ -97,6 +104,11 @@ header nav.navigator ul li > a:target {
 
 main {
   margin-top: 70px;
+  margin-bottom: 100px;
+  max-width: 1080px;
+  min-width: 960px;
+  margin-left: auto;
+  margin-right: auto;  
 }
 
 main figure {
@@ -239,7 +251,6 @@ main article section.about-me p {
 }
 
 footer {
-  margin-top: 100px;
   height: 100px;
   background-color: #fff;
   border-top: 1px solid #ccc;
