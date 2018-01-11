@@ -68,5 +68,14 @@
   <footer>
      <p>©2018 Powered by wingsico</p>
   </footer>
+
+  <script>
+    (function () {
+      var url = window.location.href;
+      if (url.indexOf('#') < 0) {
+        window.location.hash = 'Home'
+      }
+    })()
+  </script>
 </body>
 </html>
