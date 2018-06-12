@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .init-wh {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 50px auto;
+        }
+
+        div {
+            border-width: 2px;
+            border-style: solid;
+            border-color: #000;
+        }
+
+        .border-style {
+            border-radius: 50px 0px 50% 60% / 50% 0px 50% 50%;
+        }
+
+        .hsl {
+            background-color: hsla(300, 80%, 0%, 0.3);
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="init-wh border-style">
+    我是内容
+</div>
+
+<div class="init-wh hsl">
+
+</div>
+
+<div class="input-group">
+    h: <input type="range" min="0" max="360"><br>
+    s: <input type="range" min="0" max="100"><br>
+    l: <input type="range" min="0" max="100"><br>
+    a: <input type="range" min="0" max="10"><br>
+
+</div>
+<script>
+    var inputs = document.getElementsByTagName('input')
+    var hsl = document.getElementsByClassName('hsl')[0]
+    console.log(inputs, hsl)
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].onchange = function () {
+        console.log(this.value)
+        hsl.style.backgroundColor = 'hsla('+ this.value +','+ this.value +'%,'+ this.value+'%,'+this.value / 10+ ')'
+        console.log(hsl.style.backgroundColor)
+      }
+    }
+
+
+</script>
+</body>
+</html>

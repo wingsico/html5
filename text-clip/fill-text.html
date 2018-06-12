@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fill-text</title>
+    <style>
+        .fill-text {
+            font-size: 40px;
+            font-weight: bold;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <span class="fill-text">渐变彩色文字</span>
+
+    <script>
+        const fillText = document.querySelector('.fill-text')
+        const random = () => {
+          return parseInt(Math.random()*360)
+        }
+        const getColor = () => {
+          let randoms = []
+          for (let i = 0; i < 3; i++) {
+            randoms.push(random())
+          }
+          return randoms
+        }
+
+        const setBgColor = () => {
+          let startColor = '', endColor = ''
+          setInterval(() => {
+            startColor = `rgb(${getColor().join(',')})`
+            endColor = `rgb(${getColor().join(',')})`
+            fillText.style.backgroundImage = `linear-gradient(to right bottom, ${startColor}, ${endColor}`
+          }, 1000)
+        }
+
+
+        setBgColor()
+
+
+
+
+    </script>
+</body>
+</html>

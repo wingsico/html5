@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            width: 990px;
+            border: 1px solid #222;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            counter-reset: number;
+        }
+
+        .content div {
+            width: 200px;
+            height: 200px;
+            margin: 22px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        
+        .content div::after {
+            content: counter(number);
+            counter-increment: number;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            height: 30px;
+            width: 30px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background: #ccc;
+            font-size: 16px;
+            color: orange;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .content div:nth-child(1) {
+            background: linear-gradient(
+            red, blue, pink, purple
+            );
+        }
+
+        .content div:nth-child(2) {
+            background: linear-gradient(
+            to right, red, blue
+            );
+        }
+        /* 默认180deg */
+        .content div:nth-child(3) {
+            background: linear-gradient(
+            45deg, red, blue
+            ), linear-gradient(
+                    -45deg, red, blue
+            );
+        }
+
+        .content div:nth-child(4) {
+            background: linear-gradient(
+                    to right, red 100px, blue
+            );
+        }
+
+        .content div:nth-child(4) {
+            background: linear-gradient(
+                    to right, red 100px, blue 300px
+            );
+        }
+
+        .content div:nth-child(4) {
+            background: linear-gradient(
+                    to right bottom, red 50%, #fff 50%
+            );
+            background-size: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
